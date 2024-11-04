@@ -31,14 +31,6 @@
             font-family: 'Poppins', sans-serif;
         }
 
-        .banner {
-            background: radial-gradient(var(--cor-padrao-hover), var(--cor-padrao));
-        }
-
-        .banner .linha {
-            margin-top: 70px;
-        }
-
         .container {
             max-width: 1300;
             margin: auto;
@@ -69,10 +61,6 @@
 
         nav ul li a {
             text-decoration: none;
-            color: var(--cor-fonte);
-        }
-
-        .banner p {
             color: var(--cor-fonte);
         }
 
@@ -340,6 +328,48 @@
             margin-left: 20px;
         }
 
+        .novoMenu ul li a {
+            color: var(--cor-btn-fonte);
+        }
+
+        .novoMenu {
+            box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
+        }
+
+        .linha-2 {
+            margin: 100px auto 50px;
+            justify-content: space-between;
+        }
+
+        .linha-2 select {
+            padding: 5px;
+            border: 1px solid var(--cor-padrao);
+        }
+
+        .linha-2 select:focus {
+            outline: none;
+        }
+
+        .paginacao {
+            margin: 0 auto 80px;
+        }
+
+        .paginacao span {
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            border: 1px solid var(--cor-padrao);
+            text-align: center;
+            line-height: 40px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        .paginacao span:hover {
+            background: var(--cor-padrao);
+            color: var(--cor-fonte);
+        }
+
         @media (max-width:800px) {
             .banner .container .navbar nav ul {
                 position: absolute;
@@ -366,6 +396,10 @@
                 display: block;
                 cursor: pointer;
             }
+
+            .novoMenu ul li a {
+                color: var(--cor-fonte);
+            }
         }
 
         @media (max-width:600px) {
@@ -391,22 +425,26 @@
             .col-4 {
                 font-size: 24px;
             }
+
+            .novoMenu ul li a {
+                color: var(--cor-fonte);
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <div class="banner">
+    <div class="novoMenu">
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                    <img src="assets/img/logo.png" width="125px">
+                    <img src="assets/img-2/logoEscura.png" width="125px">
                 </div>
 
                 <nav>
                     <ul id="MenuItens">
-                        <li><a href="" title="">Início</a></li>
+                        <li><a href="index.html" title="">Início</a></li>
                         <li><a href="produtos.html" title="">Produtos</a></li>
                         <li><a href="" title="">Sobre</a></li>
                         <li><a href="" title="">Contatos</a></li>
@@ -414,7 +452,7 @@
                     </ul>
                 </nav>
 
-                <img src="assets/img/carrinho.png" width="30px" height="30px">
+                <img src="assets/img/carrinho2.png" width="30px" height="30px">
 
                 <img class="menu-cel" src="assets/img/menu.png" id="menu-icon" onclick="menucel()">
             </div>
@@ -435,87 +473,20 @@
         </div>
     </div>
 
-    <div class="categorias">
-        <div class="corpo-categorias">
-            <div class="linha">
-                <div class="col-3">
-                    <img src="assets/img/categoria-1.jpg">
-                </div>
-                <div class="col-3">
-                    <img src="assets/img/categoria-2.jpg">
-                </div>
-                <div class="col-3">
-                    <img src="assets/img/categoria-3.jpg">
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="corpo-categorias">
-        <h2 class="titulo">Produtos em Destaque</h2>
-
-        <div class="linha">
-            <div class="col-4">
-                <a href="ver-produto.html">
-                    <img src="assets/img/produto-1.jpg" title="">
-                </a>
-                <h4>Curso De Cobranças</h4>
-                <div class="classificacao">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                </div>
-                <p>997,99</p>
-            </div>
-
-            <div class="col-4">
-                <img src="assets/img/produto-2.jpg" title="">
-                <h4>Curso De Cobranças</h4>
-                <div class="classificacao">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                </div>
-                <p>997,99</p>
-            </div>
-
-            <div class="col-4">
-                <img src="assets/img/produto-3.jpg" title="">
-                <h4>Curso De Cobranças</h4>
-                <div class="classificacao">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                </div>
-                <p>997,99</p>
-            </div>
-
-            <div class="col-4">
-                <img src="assets/img/produto-4.jpg" title="">
-                <h4>Curso De Cobranças</h4>
-                <div class="classificacao">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                </div>
-                <p>997,99</p>
-            </div>
-
+        <div class="linha linha-2">
+            <h2>Todos os produtos</h2>
+            <select name="" id="">
+                <option value="">Mais comprados</option>
+                <option value="">Mais visitados</option>
+                <option value="">Menor preço</option>
+                <option value="">Maior preço</option>
+            </select>
         </div>
 
-        <h2 class="titulo">Novidades</h2>
-
         <div class="linha">
             <div class="col-4">
-                <img src="assets/img/produto-5.jpg" title="">
+                <img src="assets/img/produto-1.jpg">
                 <h4>Curso De Cobranças</h4>
                 <div class="classificacao">
                     <ion-icon name="star"></ion-icon>
@@ -528,7 +499,60 @@
             </div>
 
             <div class="col-4">
-                <img src="assets/img/produto-6.jpg" title="">
+                <img src="assets/img/produto-2.jpg">
+                <h4>Curso De Cobranças</h4>
+                <div class="classificacao">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                </div>
+                <p>997,99</p>
+            </div>
+
+            <div class="col-4">
+                <img src="assets/img/produto-3.jpg">
+                <h4>Curso De Cobranças</h4>
+                <div class="classificacao">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                </div>
+                <p>997,99</p>
+            </div>
+
+            <div class="col-4">
+                <img src="assets/img/produto-4.jpg">
+                <h4>Curso De Cobranças</h4>
+                <div class="classificacao">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                </div>
+                <p>997,99</p>
+            </div>
+
+            <div class="linha">
+                <div class="col-4">
+                    <img src="assets/img/produto-5.jpg">
+                    <h4>Curso De Cobranças</h4>
+                    <div class="classificacao">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                    </div>
+                    <p>997,99</p>
+                </div>
+            </div>
+            <div class="col-4">
+                <img src="assets/img/produto-6.jpg">
                 <h4>Curso De Cobranças</h4>
                 <div class="classificacao">
                     <ion-icon name="star"></ion-icon>
@@ -618,100 +642,13 @@
                 <p>997,99</p>
             </div>
         </div>
-    </div>
 
-    <div class="ofertas">
-        <div class="corpo-categorias">
-            <div class="linha">
-                <div class="col-2">
-                    <img class="oferta-img" src="assets/img/banner-2.png" alt="">
-                </div>
-
-                <div class="col-2">
-                    <p>Produto exclusivo da loja MSFLIX</p>
-                    <h1>Curso Plataforma de Streaming</h1>
-                    <small>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                        been the industry's standard dummy text ever</small>
-                    <br><br>
-                    <a href="" class="btn">Comprar agora</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="depoimentos">
-        <div class="corpo-categorias">
-            <div class="linha">
-
-                <div class="col-3">
-                    <ion-icon name="ribbon" class="depoimento-icone"></ion-icon>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-                    <div class="classificacao">
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                    </div>
-                    <img src="assets/img/cliente-1.png" alt="">
-                    <h3>Maykon</h3>
-                </div>
-
-                <div class="col-3">
-                    <ion-icon name="ribbon" class="depoimento-icone"></ion-icon>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-                    <div class="classificacao">
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                    </div>
-                    <img src="assets/img/cliente-2.png" alt="">
-                    <h3>Maykon</h3>
-                </div>
-
-                <div class="col-3">
-                    <ion-icon name="ribbon" class="depoimento-icone"></ion-icon>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-                    <div class="classificacao">
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                    </div>
-                    <img src="assets/img/cliente-3.png" alt="">
-                    <h3>Maykon</h3>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="marcas">
-        <div class="corpo-categorias">
-            <div class="linha">
-                <div class="col-5">
-                    <img src="assets/img/marca-1.png" alt="">
-                </div>
-
-                <div class="col-5">
-                    <img src="assets/img/marca-2.png" alt="">
-                </div>
-
-                <div class="col-5">
-                    <img src="assets/img/marca-3.png" alt="">
-                </div>
-
-                <div class="col-5">
-                    <img src="assets/img/marca-4.png" alt="">
-                </div>
-
-                <div class="col-5">
-                    <img src="assets/img/marca-5.png" alt="">
-                </div>
-            </div>
+        <div class="paginacao">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>&#8594;</span>
         </div>
     </div>
 
